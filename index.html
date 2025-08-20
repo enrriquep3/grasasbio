@@ -798,12 +798,12 @@
     </style>
 </head>
 <body>
- <!-- Main Header -->
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <!-- Logo -->
-            <div class="logo">
+   <!-- Main Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+             <div class="logo">
                 <a href="#inicio">
                     <img src="LOGO-MED.png" alt="GrasasBio Logo" style="height:60px; width:auto;">
                 </a>
@@ -813,46 +813,45 @@
                 </div>
             </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="nav">
-                <a href="#inicio">Inicio</a>
-                <a href="#quienes-somos">Quiénes Somos</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#acu">ACU</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
+                <!-- Desktop Navigation -->
+                <nav class="nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#quienes-somos">Quiénes Somos</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#acu">ACU</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
 
-            <!-- CTA Button -->
-            <div class="cta-button">
-                <a href="#contacto" class="btn btn-eco btn-lg">Solicita tu Recolección</a>
+                <!-- CTA Button -->
+                <div class="cta-button">
+                    <a href="#contacto" class="btn btn-eco btn-lg">Solicita tu Recolección</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                    <svg class="icon" id="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
             </div>
 
-            <!-- Mobile menu button -->
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <svg class="icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <line x1="3" y1="12" x2="21" y2="12"/>
-                    <line x1="3" y1="18" x2="21" y2="18"/>
-                </svg>
-                <svg class="icon" id="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobile-nav">
+                <a href="#inicio" onclick="toggleMobileMenu()">Inicio</a>
+                <a href="#quienes-somos" onclick="toggleMobileMenu()">Quiénes Somos</a>
+                <a href="#servicios" onclick="toggleMobileMenu()">Servicios</a>
+                <a href="#acu" onclick="toggleMobileMenu()">ACU</a>
+                <a href="#contacto" onclick="toggleMobileMenu()">Contacto</a>
+                <a href="#contacto" class="btn btn-eco" onclick="toggleMobileMenu()">Solicita tu Recolección</a>
+            </nav>
         </div>
-
-        <!-- Mobile Navigation -->
-        <nav class="mobile-nav" id="mobile-nav">
-            <a href="#inicio" onclick="toggleMobileMenu()">Inicio</a>
-            <a href="#quienes-somos" onclick="toggleMobileMenu()">Quiénes Somos</a>
-            <a href="#servicios" onclick="toggleMobileMenu()">Servicios</a>
-            <a href="#acu" onclick="toggleMobileMenu()">ACU</a>
-            <a href="#contacto" onclick="toggleMobileMenu()">Contacto</a>
-            <a href="#contacto" class="btn btn-eco" onclick="toggleMobileMenu()">Solicita tu Recolección</a>
-        </nav>
-    </div>
-</header>
-
+    </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
