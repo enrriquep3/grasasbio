@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrasasBio - Recolección de Aceites Vegetales Usados | Líder en Colombia</title>
+    <meta name="description" content="GrasasBio S.A.S. líder en Colombia en gestión responsable de aceites de cocina usados y grasas vegetales. Servicios de recolección, capacitación y certificación.">
+    <meta name="keywords" content="aceites usados, recolección aceites, grasas vegetales, sostenibilidad, medio ambiente, Colombia">
+    <link rel="canonical" href="https://grasasbio.com">
+    
+    <style>
+        :root {
+            --eco-green: hsl(142, 76%, 36%);
+            --eco-green-light: hsl(142, 76%, 45%);
+            --eco-orange: hsl(44, 100%, 50%);
+            --eco-orange-light: hsl(44, 100%, 60%);
+            --eco-dark: hsl(220, 13%, 18%);
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(222.2, 84%, 4.9%);
+            --gray-50: hsl(210, 40%, 98%);
+            --gray-100: hsl(210, 40%, 96%);
+            --gray-300: hsl(212, 13%, 84%);
+            --gray-600: hsl(220, 9%, 46%);
+            --gray-700: hsl(215, 14%, 34%);
+            --gray-800: hsl(217, 19%, 27%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background-color: var(--background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        .top-bar {
+            background-color: var(--eco-dark);
+            color: white;
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: var(--eco-orange);
+        }
+
+        .header {
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            height: 3rem;
+            width: 3rem;
+        }
+
+        .logo h1 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--eco-green);
+        }
+
+        .logo p {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        .nav {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover, .nav a.active {
+            color: var(--eco-green);
+        }
+
+        .cta-button {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            padding: 1rem 0;
+            border-top: 1px solid var(--gray-300);
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .btn-eco {
+            background-color: var(--eco-green);
+            color: white;
+        }
+
+        .btn-eco:hover {
+            background-color: var(--eco-green-light);
+        }
+
+        .btn-eco-outline {
+            border: 2px solid var(--eco-green);
+            color: var(--eco-green);
+            background: transparent;
+        }
+
+        .btn-eco-outline:hover {
+            background-color: var(--eco-green);
+            color: white;
+        }
+
+        .btn-lg {
+            padding: 0.75rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--eco-green), var(--eco-green-light), var(--eco-orange));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero .highlight {
+            color: var(--eco-orange);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-icon {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .stat-number {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--eco-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-divider {
+            width: 6rem;
+            height: 0.25rem;
+            background: linear-gradient(to right, var(--eco-green), var(--eco-orange));
+            margin: 0 auto 2rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-700);
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--gray-50);
+        }
+
+        .about-content {
+            max-width: 64rem;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--eco-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            font-size: 1.125rem;
+            color: var(--gray-700);
+            margin-bottom: 2rem;
+        }
+
+        .commitments {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .commitments h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--eco-green);
+            margin-bottom: 1rem;
+        }
+
+        .commitment-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .commitment-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.75rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .objective {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .objective:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .objective-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .objective-number {
+            background: var(--eco-green);
+            color: white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid transparent;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--eco-green);
+        }
+
+        .service-icon {
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--eco-green);
+            color: white;
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--gray-800);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .services-cta {
+            background: var(--eco-green);
+            border-radius: 1rem;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .services-cta h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .services-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* ACU Info Section */
+        .acu {
+            background-color: var(--gray-50);
+        }
+
+        .acu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .acu-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .step {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .step-number {
+            background: var(--eco-orange);
+            color: white;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-700);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 0.375rem;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--eco-green);
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--eco-orange);
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--eco-dark);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--eco-orange);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section p {
+            font-size: 0.875rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--eco-orange);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .footer-bottom-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--eco-orange);
+        }
+
+        /* Icons */
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: currentColor;
+        }
+
+        .icon-sm {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .icon-lg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .commitment-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .acu-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .nav {
+                display: flex;
+            }
+            
+            .cta-button {
+                display: block;
+            }
+            
+            .mobile-menu-btn {
+                display: none;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .mission-vision {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .objectives-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .acu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .acu-steps {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .contact-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .top-bar-content {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-links">
+                    <a href="tel:6017618796">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        (601) 7618796
+                    </a>
+                    <a href="mailto:comercial@grasasbio.com">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        comercial@grasasbio.com
+                    </a>
+                </div>
+                <div style="font-size: 0.75rem;">
+                    Copyright © 2020 All Rights Reserved. weav.com.co
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2334A853'/%3E%3Cpath d='M30 40h40v20H30z' fill='%23FFC107'/%3E%3Ccircle cx='35' cy='45' r='3' fill='%23fff'/%3E%3Ccircle cx='50' cy='45' r='3' fill='%23fff'/%3E%3Ccircle cx='65' cy='45' r='3' fill='%23fff'/%3E%3C/svg%3E" alt="GrasasBio Logo">
+                    <div>
+                        <h1>GrasasBio</h1>
+                        <p>Recolección de Aceites Vegetales Usados</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#quienes-somos">Quiénes Somos</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#acu">ACU</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="cta-button">
+                    <a href="#contacto" class="btn btn-eco btn-lg">Solicita tu Recolección</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="icon" id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                    <svg class="icon" id="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobile-nav">
+                <a href="#inicio" onclick="toggleMobileMenu()">Inicio</a>
+                <a href="#quienes-somos" onclick="toggleMobileMenu()">Quiénes Somos</a>
+                <a href="#servicios" onclick="toggleMobileMenu()">Servicios</a>
+                <a href="#acu" onclick="toggleMobileMenu()">ACU</a>
+                <a href="#contacto" onclick="toggleMobileMenu()">Contacto</a>
+                <a href="#contacto" class="btn btn-eco" onclick="toggleMobileMenu()">Solicita tu Recolección</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Transformamos tu aceite usado en 
+                    <span class="highlight"> soluciones sostenibles</span>
+                </h1>
+                
+                <p>
+                    Únete al cambio con GRASASBIO S.A.S. Líder en Colombia en la gestión responsable 
+                    de aceites de cocina usados y grasas vegetales y animales.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-eco btn-lg" style="background: white; color: var(--eco-green);">
+                        Solicita tu Recolección
+                    </a>
+                    <a href="#servicios" class="btn btn-eco-outline btn-lg" style="border-color: white; color: white;">
+                        Conoce Nuestros Servicios
+                    </a>
+                </div>
+
+                <!-- Impact Stats -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number">10,435,689 KG</div>
+                        <div>Aceite Recolectado</div>
+                    </div>
+                    
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number">7,900</div>
+                        <div>Clientes Atendidos</div>
+                    </div>
+                    
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number">40,000 L</div>
+                        <div>Agua Protegida por Litro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="quienes-somos" class="about">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">Quiénes Somos</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="about-content">
+                <h3>GRASASBIO S.A.S.</h3>
+                <p>
+                    Es una empresa colombiana líder en la gestión de <strong>aceites de cocina usados (ACU)</strong> y otras grasas vegetales y animales.
+                </p>
+                <p>
+                    Brindamos nuestros servicios a empresas del sector gastronómico e industrial (grandes, medianas y pequeñas), cumpliendo con altos 
+                    estándares de calidad, seguridad y atención al cliente. Nuestro propósito es reducir el impacto ambiental y proteger la salud pública a 
+                    través de una operación ética, sostenible y responsable.
+                </p>
+
+                <div class="commitments">
+                    <h4>Estamos comprometidos con:</h4>
+                    <div class="commitment-list">
+                        <div class="commitment-item">
+                            <svg class="icon" style="color: var(--eco-green);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <span>Cumplir la normativa ambiental vigente</span>
+                        </div>
+                        <div class="commitment-item">
+                            <svg class="icon" style="color: var(--eco-green);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <span>Generar bienestar en nuestras comunidades</span>
+                        </div>
+                        <div class="commitment-item">
+                            <svg class="icon" style="color: var(--eco-green);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <span>Promover la economía circular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission and Vision -->
+            <div class="mission-vision">
+                <div class="card">
+                    <div class="card-header">
+                        <svg class="card-icon" style="color: var(--eco-orange);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                        <h3 class="card-title" style="color: var(--eco-orange);">MISIÓN</h3>
+                    </div>
+                    <p>
+                        Gestionamos y valorizamos responsablemente aceites de cocina usados y otras grasas animales y vegetales, promoviendo soluciones 
+                        sostenibles que reduzcan el impacto ambiental y protejan la salud pública. Inspiramos a empresas a sumarse al cambio mediante 
+                        servicios con trazabilidad, capacitación y cumplimiento normativo.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <svg class="card-icon" style="color: var(--eco-green);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                        <h3 class="card-title" style="color: var(--eco-green);">VISIÓN</h3>
+                    </div>
+                    <p>
+                        En 2030, GRASASBIO será referente nacional e internacional en la gestión sostenible de aceites usados, reconocida por su compromiso 
+                        ambiental, innovación en tratamiento de residuos, excelencia operativa y cumplimiento de estándares de calidad, ambientales y de 
+                        seguridad y salud en el trabajo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Strategic Objectives -->
+            <div>
+                <h3 style="font-size: 1.875rem; font-weight: bold; text-align: center; color: var(--eco-green); margin-bottom: 3rem;">OBJETIVOS ESTRATÉGICOS</h3>
+                <div class="objectives-grid">
+                    <div class="objective">
+                        <div class="objective-header">
+                            <div class="objective-number">1</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Fortalecer la responsabilidad social y ambiental</h4>
+                                <p style="color: var(--gray-600); font-size: 0.875rem;">Promoviendo buenas prácticas en la gestión de aceites de cocina usados y generando valor en las comunidades donde operamos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="objective">
+                        <div class="objective-header">
+                            <div class="objective-number">2</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Consolidar un servicio al cliente ágil, confiable y profesional</h4>
+                                <p style="color: var(--gray-600); font-size: 0.875rem;">Enfocado en generar experiencias positivas y relaciones de largo plazo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="objective">
+                        <div class="objective-header">
+                            <div class="objective-number">3</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Expandir nuestra cobertura geográfica</h4>
+                                <p style="color: var(--gray-600); font-size: 0.875rem;">Y participación de mercado a través de alianzas y estrategias sostenibles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="objective">
+                        <div class="objective-header">
+                            <div class="objective-number">4</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Implementar el enfoque de Manejo Integral de Residuos</h4>
+                                <p style="color: var(--gray-600); font-size: 0.875rem;">Integrando nuevas líneas de aprovechamiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="objective">
+                        <div class="objective-header">
+                            <div class="objective-number">5</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Alcanzar la excelencia operativa</h4>
+                                <p style="color: var(--gray-600); font-size: 0.875rem;">Mediante procesos eficientes, seguros y trazables, soportados por nuevas tecnologías.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="objective">
+                        <div class="objective-header">
+                            <div class="objective-number">6</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Mejorar continuamente el Sistema Integrado de Gestión</h4>
+                                <p style="color: var(--gray-600); font-size: 0.875rem;">Con enfoque preventivo y de mejora constante.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="objective">
+                        <div class="objective-header">
+                            <div class="objective-number">7</div>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Desarrollar capacidades de innovación</h4>
+                                <p style="color: var(--gray-600); font-size: 0.875rem;">En tratamiento de residuos para mantener una ventaja competitiva sostenible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Te ayudamos a gestionar adecuadamente tu aceite usado, cumpliendo con la normativa ambiental y generando valor.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 0 5.5-1.34 5.5-3s-2.5-3-5.5-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Capacitación personalizada</h3>
+                    <p class="service-description">Sobre almacenamiento, disposición y aprovechamiento del ACU.</p>
+                    <a href="#contacto" class="btn btn-eco-outline btn-sm" style="width: 100%;">Solicita tu capacitación</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Recolección segura y programada</h3>
+                    <p class="service-description">De aceites y grasas vegetales o animales.</p>
+                    <a href="#contacto" class="btn btn-eco-outline btn-sm" style="width: 100%;">Solicitar recolección</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Certificación digital</h3>
+                    <p class="service-description">Avalada por entidades distritales y nacionales.</p>
+                    <a href="#contacto" class="btn btn-eco-outline btn-sm" style="width: 100%;">Solicita tu certificado</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10,9 9,9 8,9"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Certificación de huella de carbono</h3>
+                    <p class="service-description">Documenta tu compromiso ambiental.</p>
+                    <a href="#contacto" class="btn btn-eco-outline btn-sm" style="width: 100%;">Más información</a>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="services-cta">
+                <svg class="icon" style="width: 4rem; height: 4rem; margin: 0 auto 1.5rem; color: var(--eco-orange);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14,2 14,8 20,8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                <h3>
+                    Toda nuestra operación incluye documentación en regla y personal capacitado.
+                </h3>
+                
+                <div class="services-info">
+                    <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                        ¿Necesitas una recolección?
+                    </h4>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.125rem;">¡Programa tu servicio con nosotros hoy mismo!</p>
+                    <a href="#contacto" class="btn btn-eco" style="background: white; color: var(--eco-green); display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Programar Recolección
+                    </a>
+                </div>
+            </div>
+
+            <!-- How to Recycle Button -->
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="#acu" class="btn btn-eco btn-lg">
+                    ¿Cómo reciclar el ACU? - Siguiente Página
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACU Info Section -->
+    <section id="acu" class="acu">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">¿Cómo reciclar el ACU?</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Sigue estos sencillos pasos para un manejo adecuado de tus aceites de cocina usados
+                </p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="acu-grid">
+                <div class="card">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--eco-green); margin-bottom: 1.5rem;">¿Qué es el ACU?</h3>
+                    <p style="margin-bottom: 1rem;">
+                        El <strong>Aceite de Cocina Usado (ACU)</strong> es todo aceite vegetal que ha sido utilizado en procesos de fritura, 
+                        horneado o cocción de alimentos y que ya no es apto para el consumo humano.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        <strong>¿Sabías que?</strong> Un litro de aceite usado puede contaminar hasta 40,000 litros de agua. 
+                        Por eso es fundamental su correcta gestión.
+                    </p>
+                    <div style="background: var(--gray-100); padding: 1rem; border-radius: 0.5rem; margin-top: 1.5rem;">
+                        <h4 style="font-weight: 600; color: var(--eco-green); margin-bottom: 0.5rem;">Impacto Ambiental</h4>
+                        <p style="font-size: 0.875rem;">
+                            El manejo inadecuado del ACU puede causar obstrucción de tuberías, contaminación de fuentes hídricas 
+                            y daños al ecosistema marino.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--eco-green); margin-bottom: 1.5rem;">Beneficios del Reciclaje</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <svg class="icon" style="color: var(--eco-green); flex-shrink: 0; margin-top: 0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800);">Protección del Medio Ambiente</h4>
+                                <p style="font-size: 0.875rem; color: var(--gray-600);">Evita la contaminación de suelos y fuentes hídricas</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <svg class="icon" style="color: var(--eco-green); flex-shrink: 0; margin-top: 0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800);">Economía Circular</h4>
+                                <p style="font-size: 0.875rem; color: var(--gray-600);">Transforma residuos en productos útiles como biodiesel</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <svg class="icon" style="color: var(--eco-green); flex-shrink: 0; margin-top: 0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--gray-800);">Cumplimiento Normativo</h4>
+                                <p style="font-size: 0.875rem; color: var(--gray-600);">Certificación que respalda tu compromiso ambiental</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Steps -->
+            <div style="margin-top: 4rem;">
+                <h3 style="font-size: 1.875rem; font-weight: bold; text-align: center; color: var(--eco-green); margin-bottom: 3rem;">Proceso de Recolección</h3>
+                <div class="acu-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Almacenamiento</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray-600);">Almacena el aceite usado en recipientes limpios y secos, lejos del calor</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Contacto</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray-600);">Contáctanos para programar la recolección en tu establecimiento</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Recolección</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray-600);">Nuestro equipo capacitado realiza la recolección segura y programada</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--gray-800); margin-bottom: 0.5rem;">Certificación</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray-600);">Recibes certificación digital que avala tu gestión responsable</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="text-align: center; margin-top: 4rem;">
+                <div class="card" style="background: var(--eco-green); color: white;">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">¿Listo para contribuir al medio ambiente?</h3>
+                    <p style="margin-bottom: 2rem; opacity: 0.9;">
+                        Únete a las empresas responsables que ya confían en GrasasBio para la gestión de sus aceites usados.
+                    </p>
+                    <a href="#contacto" class="btn btn-eco" style="background: white; color: var(--eco-green);">
+                        Solicita tu Recolección Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">Contáctanos</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Estamos aquí para ayudarte con todas tus necesidades de gestión de aceites usados
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="card" style="box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--eco-green); margin-bottom: 1.5rem;">Envíanos un mensaje</h3>
+                    <form action="https://formsubmit.co/comercial@grasasbio.com" method="POST" accept-charset="UTF-8">
+    <!-- Anti-bot honeypot (kept hidden) -->
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <!-- Email CC: replace with your second email -->
+    <input type="hidden" name="_cc" value="otro@ejemplo.com">
+    <input type="hidden" name="_subject" value="Nuevo contacto - Sitio GrasasBio">
+    <input type="hidden" name="_template" value="table">
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre completo" required>
+        </div>
+        <div class="form-group">
+            <label for="company">Empresa</label>
+            <input id="company" name="company" type="text" placeholder="Nombre de tu empresa">
+        </div>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input id="phone" name="phone" type="tel" placeholder="+57 300 000 0000">
+        </div>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label for="city">Ciudad</label>
+            <input id="city" name="city" type="text" placeholder="Tu ciudad">
+        </div>
+        <div class="form-group">
+            <label for="service">Servicio</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="recoleccion">Recolección</option>
+                <option value="capacitacion">Capacitación</option>
+                <option value="certificacion">Certificación</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" placeholder="Cuéntanos cómo podemos ayudarte..." rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-eco btn-lg" style="width: 100%;">Enviar Mensaje</button>
+
+    <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: 0.5rem;">
+        Protegido por reCAPTCHA y filtros anti‑spam (honeypot). Al enviar, aceptas nuestra política de datos.
+    </p>
+
+</form>
+                </div>
+
+                <!-- Contact Information -->
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <div class="card" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--eco-green); margin-bottom: 1.5rem;">Información de Contacto</h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--gray-800);">Dirección</h4>
+                                    <p style="color: var(--gray-600);">Carrera 9 # 32ª –83</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--gray-800);">Teléfonos</h4>
+                                    <p style="color: var(--gray-600);">(601) 7618796</p>
+                                    <p style="color: var(--gray-600);">3005995277</p>
+                                    <p style="color: var(--gray-600);">3209354466</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--gray-800);">Email</h4>
+                                    <p style="color: var(--gray-600);">comercial@grasasbio.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="card" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--eco-green); margin-bottom: 1.5rem;">Redes Sociales</h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <a href="#" style="display: flex; align-items: center; gap: 0.75rem; color: var(--gray-600); text-decoration: none; transition: color 0.3s;">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                                <span>Instagram (Logo) Grasas Bio S.A.S</span>
+                            </a>
+                            <a href="#" style="display: flex; align-items: center; gap: 0.75rem; color: var(--gray-600); text-decoration: none; transition: color 0.3s;">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                <span>Facebook (Logo) Grasasbio SAS</span>
+                            </a>
+                            <a href="#" style="display: flex; align-items: center; gap: 0.75rem; color: var(--gray-600); text-decoration: none; transition: color 0.3s;">
+                                <span style="width: 1.25rem; height: 1.25rem; display: flex; align-items: center; justify-content: center; background: black; color: white; font-size: 0.75rem; font-weight: bold; border-radius: 0.125rem;">T</span>
+                                <span>Tik Tok (Logo) Grasasbio SAS</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Logo and Call to Action -->
+                    <div class="card" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background: var(--eco-green); color: white; text-align: center;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2334A853'/%3E%3Cpath d='M30 40h40v20H30z' fill='%23FFC107'/%3E%3Ccircle cx='35' cy='45' r='3' fill='%23fff'/%3E%3Ccircle cx='50' cy='45' r='3' fill='%23fff'/%3E%3Ccircle cx='65' cy='45' r='3' fill='%23fff'/%3E%3C/svg%3E" alt="GrasasBio Logo" style="width: 5rem; height: 5rem; margin: 0 auto 1rem; background: white; border-radius: 50%; padding: 0.5rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">¿Listo para hacer la diferencia?</h3>
+                        <p style="margin-bottom: 1.5rem; opacity: 0.9;">
+                            Únete a las miles de empresas que ya confían en GrasasBio para la gestión responsable de sus aceites usados.
+                        </p>
+                        <a href="#contacto" class="btn btn-eco" style="background: white; color: var(--eco-green);">
+                            Solicita tu Recolección Ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <!-- Logos Banner -->
+    <section id="aliados" aria-label="Aliados y Certificaciones" style="background: #f9fafb; padding: 2.5rem 0; border-top: 1px solid #eef2f7; border-bottom: 1px solid #eef2f7;">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center;">Aliados & Certificaciones</h2>
+            <div class="section-divider"></div>
+            <div class="logos-banner" style="overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; padding: 1rem 0;">
+                <div class="logos-track" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.5rem; align-items: center;">
+        <div class="logo-item"><img src="LOGOS/CAM.png" alt="CAM"></div>
+        <div class="logo-item"><img src="LOGOS/CorantioquiaSoloJPG-300x231.jpg" alt="CorantioquiaSoloJPG 300x231"></div>
+        <div class="logo-item"><img src="LOGOS/Corpomojana-Eslogan-Web.png" alt="Corpomojana Eslogan Web"></div>
+        <div class="logo-item"><img src="LOGOS/ISCC.png" alt="ISCC"></div>
+        <div class="logo-item"><img src="LOGOS/LOGO DAGMA.jpg" alt="LOGO DAGMA"></div>
+        <div class="logo-item"><img src="LOGOS/LOGO SDA.png" alt="LOGO SDA"></div>
+        <div class="logo-item"><img src="LOGOS/logo-corpo-2018.png" alt="logo corpo 2018"></div>
+        <div class="logo-item"><img src="LOGOS/LOGOCAR.png" alt="LOGOCAR"></div>
+        <div class="logo-item"><img src="LOGOS/logo_corpoamazonia.jpg" alt="logo corpoamazonia"></div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .logos-track img { max-height: 70px; object-fit: contain; width: 100%; filter: grayscale(100%); opacity: 0.9; transition: filter .2s, opacity .2s; }
+            .logos-track img:hover { filter: none; opacity: 1; }
+            @media (max-width: 640px) { .logos-track img { max-height: 56px; } }
+        </style>
+    </section>
+<footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2334A853'/%3E%3Cpath d='M30 40h40v20H30z' fill='%23FFC107'/%3E%3Ccircle cx='35' cy='45' r='3' fill='%23fff'/%3E%3Ccircle cx='50' cy='45' r='3' fill='%23fff'/%3E%3Ccircle cx='65' cy='45' r='3' fill='%23fff'/%3E%3C/svg%3E" alt="GrasasBio Logo" style="height: 3rem; width: 3rem; background: white; border-radius: 50%; padding: 0.25rem;">
+                        <div>
+                            <h3 style="color: var(--eco-orange);">GrasasBio</h3>
+                            <p style="font-size: 0.875rem; color: #d1d5db;">Recolección de Aceites Vegetales Usados</p>
+                        </div>
+                    </div>
+                    <p>
+                        Empresa colombiana líder en la gestión responsable de aceites de cocina usados y grasas vegetales y animales, 
+                        comprometida con la sostenibilidad y el cuidado del medio ambiente.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contáctanos</h3>
+                    <div class="footer-links">
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <svg class="icon" style="color: var(--eco-orange); flex-shrink: 0; margin-top: 0.125rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Carrera 9 # 32ª –83</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg class="icon" style="color: var(--eco-orange); flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <div>
+                                <p>(601) 7618796</p>
+                                <p>3005995277</p>
+                                <p>3209354466</p>
+                            </div>
+                        </div>
+                        <a href="mailto:comercial@grasasbio.com">
+                            <svg class="icon" style="color: var(--eco-orange); flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            comercial@grasasbio.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-section">
+                    <h3>Redes Sociales</h3>
+                    <div class="footer-links">
+                        <a href="#">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                            <span>Instagram (Logo) Grasas Bio S.A.S</span>
+                        </a>
+                        <a href="#">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            <span>Facebook (Logo) Grasasbio SAS</span>
+                        </a>
+                        <a href="#">
+                            <span style="width: 1.25rem; height: 1.25rem; display: flex; align-items: center; justify-content: center; background: white; color: black; font-size: 0.75rem; font-weight: bold; border-radius: 0.125rem;">T</span>
+                            <span>Tik Tok (Logo) Grasasbio SAS</span>
+                        </a>
+                    </div>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="font-weight: 600; color: var(--eco-orange); margin-bottom: 0.75rem;">Síguenos</h4>
+                        <p>
+                            Mantente al día con nuestras últimas noticias y consejos sobre sostenibilidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p style="font-size: 0.875rem; color: #9ca3af;">
+                    Copyright © 2020 All Rights Reserved. weav.com.co
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                    <a href="#">Certificaciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            } else {
+                mobileNav.classList.add('active');
+                menuIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handled by FormSubmit (no local JS needed)
+        // Add active state to navigation links based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add hover effects for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects for social links in footer
+            document.querySelectorAll('.footer-links a').forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.color = 'var(--eco-orange)';
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.style.color = '#d1d5db';
+                });
+            });
+
+            // Add hover effects for contact section social links
+            document.querySelectorAll('#contacto .card a').forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.color = 'var(--eco-green)';
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.style.color = 'var(--gray-600)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
