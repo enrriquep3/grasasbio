@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrasasBio - ¿Qué es el ACU?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header/Nav (same) -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="contact-links">
+        <a href="tel:+6017618796">☎️ (601) 761 8796</a>
+        <a href="mailto:comercial@grasasbio.com">✉️ comercial@grasasbio.com</a>
+      </div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="grasasbio-logo.png" alt="GrasasBio Logo">
+        <img src="iscc-logo.png" alt="ISCC Certification Logo">
+      </div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="acu.html" class="active">¿Qué es el ACU?</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span class="menu-icon">&#9776;</span><span class="close-icon" style="display:none;">✕</span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="index.html" onclick="toggleMobileMenu()">Inicio</a>
+      <a href="servicios.html" onclick="toggleMobileMenu()">Servicios</a>
+      <a href="quienes-somos.html" onclick="toggleMobileMenu()">Quiénes Somos</a>
+      <a href="acu.html" onclick="toggleMobileMenu()">¿Qué es el ACU?</a>
+      <a href="contacto.html" onclick="toggleMobileMenu()">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="acu-info">
+    <div class="container">
+      <h2>¿Qué es el ACU?</h2>
+      <p>
+        El Aceite de Cocina Usado (ACU) es un residuo generado tras la fritura de alimentos. 
+        Al ser expuesto a altas temperaturas (>190°C), sufre alteraciones físicas y químicas, 
+        lo que lo convierte en un desecho potencialmente contaminante:contentReference[oaicite:19]{index=19}.
+      </p>
+      <h3>¿Cómo reciclamos el aceite?</h3>
+      <ul class="recycle-steps">
+        <li>Recolección del ACU en puntos generadores.</li>
+        <li>Transporte seguro hasta nuestra planta.</li>
+        <li>Pretratamiento para retirar humedad e impurezas.</li>
+        <li>Transformación en materias primas para biocombustible.</li>
+        <li>Emisión de certificados y trazabilidad completa.</li>
+      </ul>
+
+      <h3>Evita a los recolectores informales</h3>
+      <p>No entregues tu ACU a gestores no autorizados. ¡Es peligroso!</p>
+      <ul class="danger-list">
+        <li>🔴 Reenvasado ilegal: Puede ser vendido como aceite “nuevo”, poniendo en riesgo la salud pública.</li>
+        <li>🔴 Jabones sin control: El ACU mal manejado puede generar productos contaminantes.</li>
+        <li>🔴 Alimento para animales: El aceite degradado puede causar enfermedades en la cadena alimenticia.</li>
+        <li>🔴 Uso no autorizado: La ley (Res. 0316/2018) solo permite el aprovechamiento del ACU en biocombustibles:contentReference[oaicite:20]{index=20}.</li>
+      </ul>
+      <ul class="safe-practices">
+        <li>✅ Entrega tu ACU a gestores autorizados (como GRASASBIO).</li>
+        <li>✅ Solicita tu certificado de recolección y aprovechamiento final.</li>
+      </ul>
+
+      <h3>Normatividad</h3>
+      <p>
+        Comprometidos con la ley y el medio ambiente: en GrasasBio operamos bajo el cumplimiento estricto 
+        de la normatividad ambiental vigente en Colombia y Bogotá para la gestión del ACU:contentReference[oaicite:21]{index=21}. 
+        Te ayudamos a cumplirla con trazabilidad y documentación certificada.
+      </p>
+      <ul class="norms-list">
+        <li><strong>Resolución 0316 de 2018:</strong> Establece requisitos para la gestión integral del ACU (almacenamiento adecuado, entrega solo a gestores autorizados, registros de recolección, etc.):contentReference[oaicite:22]{index=22}.</li>
+        <li><strong>Acuerdo 634 de 2015 (Bogotá):</strong> Promueve la recolección, transporte y aprovechamiento del ACU en el Distrito:contentReference[oaicite:23]{index=23}.</li>
+        <!-- Additional legal norms can be listed here -->
+      </ul>
+
+      <h3>Sostenibilidad</h3>
+      <p>
+        Nuestra operación está avalada por certificaciones internacionales. Operamos bajo el esquema 
+        voluntario ISCC (Certificación de Sostenibilidad y Carbono), que garantiza prácticas sostenibles 
+        en toda la cadena de valor del ACU:contentReference[oaicite:24]{index=24}. 
+      </p>
+      <ul class="sustain-list">
+        <li>Medimos y reducimos nuestra huella de carbono.</li>
+        <li>Trazabilidad total desde la recolección hasta el aprovechamiento.</li>
+        <li>Cumplimos normas ambientales europeas y globales.</li>
+        <li>Contribuimos a los Objetivos de Desarrollo Sostenible (ODS).</li>
+      </ul>
+      <button class="btn btn-eco">Descarga nuestra certificación ISCC</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-contact">
+        <p>Carrera 9 #32ª–83, Bogotá</p>
+        <p>Tel: (601) 761 8796</p>
+        <p>Email: comercial@grasasbio.com</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">TikTok</a>
+      </div>
+      <p>&copy; 2025 GrasasBio S.A.S. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/573052665845" class="whatsapp-button">
+    <img src="whatsapp-icon.png" alt="WhatsApp Icon">
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
