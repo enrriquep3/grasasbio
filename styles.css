@@ -1,0 +1,234 @@
+/* Variables */
+:root {
+    --eco-green: hsl(142, 76%, 36%);
+    --eco-green-light: hsl(142, 76%, 45%);
+    --eco-orange: hsl(44, 100%, 50%);
+    --eco-orange-light: hsl(44, 100%, 60%);
+    --eco-dark: hsl(220, 13%, 18%);
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(0, 0%, 0%);
+    --gray-light: hsl(210, 40%, 90%);
+    --gray-dark: hsl(0, 0%, 20%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--foreground);
+    background-color: var(--background);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Top contact bar */
+.top-bar {
+    background-color: var(--eco-dark);
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+}
+.top-bar .contact-links {
+    display: flex;
+    justify-content: space-around;
+}
+.top-bar .contact-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Header */
+.header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+.logo img {
+    height: 50px;
+    margin-right: 1rem;
+}
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+.nav a {
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-weight: 500;
+}
+.nav a.active, .nav a:hover {
+    color: var(--eco-green);
+}
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    display: none;
+}
+.menu-icon, .close-icon {
+    font-size: 1.5rem;
+}
+
+/* Mobile nav */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+}
+.mobile-nav a {
+    padding: 1rem;
+    border-top: 1px solid var(--gray-light);
+    color: var(--gray-dark);
+}
+.mobile-nav a:hover {
+    background-color: var(--gray-light);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--eco-green), var(--eco-green-light), var(--eco-orange));
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.hero-buttons a {
+    margin: 0 0.5rem;
+}
+
+/* Content Sections */
+.about, .services, .acu-info, .contact, .collection-form {
+    padding: 2rem 0;
+}
+h2, h3 {
+    color: var(--eco-green);
+    margin-bottom: 1rem;
+}
+ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+ul.commitment-list li::marker {
+    color: var(--eco-green);
+}
+ul.recycle-steps li::marker {
+    color: var(--eco-orange);
+}
+ul.danger-list li::marker {
+    color: red;
+}
+ul.safe-practices li::marker {
+    color: green;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+.btn-eco {
+    background-color: var(--eco-green);
+    color: white;
+}
+.btn-eco:hover {
+    background-color: var(--eco-green-light);
+}
+.btn-eco-outline {
+    border: 2px solid var(--eco-green);
+    background: none;
+    color: var(--eco-green);
+}
+.btn-eco-outline:hover {
+    background-color: var(--eco-green);
+    color: white;
+}
+.btn-lg {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Forms */
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+}
+input[type="submit"] {
+    border: none;
+}
+
+/* Commitments and objectives */
+.commitment-list li, .service-list li, .objectives li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--eco-dark);
+    color: white;
+    padding: 2rem 1rem;
+}
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer-contact p, .footer-social a {
+    margin-bottom: 0.5rem;
+}
+.footer-social a {
+    margin-right: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* Floating WhatsApp button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 200;
+}
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav { display: none; }
+    .mobile-menu-btn { display: block; }
+    .mobile-nav { display: flex; }
+}
