@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrasasBio - Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header/Nav (same) -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="contact-links">
+        <a href="tel:+6017618796">☎️ (601) 761 8796</a>
+        <a href="mailto:comercial@grasasbio.com">✉️ comercial@grasasbio.com</a>
+      </div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="grasasbio-logo.png" alt="GrasasBio Logo">
+        <img src="iscc-logo.png" alt="ISCC Certification Logo">
+      </div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="acu.html">¿Qué es el ACU?</a>
+        <a href="contacto.html" class="active">Contacto</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span class="menu-icon">&#9776;</span><span class="close-icon" style="display:none;">✕</span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="index.html" onclick="toggleMobileMenu()">Inicio</a>
+      <a href="servicios.html" onclick="toggleMobileMenu()">Servicios</a>
+      <a href="quienes-somos.html" onclick="toggleMobileMenu()">Quiénes Somos</a>
+      <a href="acu.html" onclick="toggleMobileMenu()">¿Qué es el ACU?</a>
+      <a href="contacto.html" onclick="toggleMobileMenu()">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>Diligencia el siguiente formulario y nos pondremos en contacto lo más pronto posible.</p>
+      <form action="#" method="post">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <textarea name="mensaje" placeholder="Mensaje"></textarea>
+        <input type="submit" value="Enviar" class="btn btn-eco btn-lg">
+      </form>
+
+      <h3>Síguenos en redes sociales</h3>
+      <div class="social-links">
+        <a href="https://www.facebook.com/grasasbio" target="_blank">Facebook</a>
+        <a href="https://x.com/grasasbio" target="_blank">X (Twitter)</a>
+        <a href="https://www.instagram.com/grasas.bio" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/grasas-bio-a437b4194" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">TikTok</a> <!-- Placeholder for TikTok link -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-contact">
+        <p>Carrera 9 #32ª–83, Bogotá</p>
+        <p>Tel: (601) 761 8796</p>
+        <p>Email: comercial@grasasbio.com</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">TikTok</a>
+      </div>
+      <p>&copy; 2025 GrasasBio S.A.S. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/573052665845" class="whatsapp-button">
+    <img src="whatsapp-icon.png" alt="WhatsApp Icon">
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
