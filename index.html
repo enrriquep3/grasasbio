@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrasasBio - Inicio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-left">
+      <img src="LOGO-MED.png" alt="GrasasBio Logo" class="logo">
+    </div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="quienes-somos.html">Quiénes Somos</a>
+      <a href="acu.html">¿Cómo lo Hacemos?</a>
+      <a href="normatividad.html">Normatividad</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="grabitec.html">Grabitec</a>
+      <a href="puntos-limpios.html">Puntos Limpios</a>
+    </nav>
+    <div class="header-right">
+      <img src="ISCC.png" alt="ISCC Logo" class="logo-small">
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <img src="placeholder-banner.jpg" alt="Impacto Ambiental" class="banner-img">
+    <div class="banner-text">
+      <h1>♻️ Transformamos tu aceite de cocina usado en soluciones sostenibles</h1>
+      <p>🌍 Únete al cambio con GRASASBIO S.A.S.</p>
+      <a href="#formulario" class="btn">Solicita tu recolección</a>
+    </div>
+  </section>
+
+  <!-- Formulario -->
+  <section id="formulario" class="form-section">
+    <h2>Solicita tu recolección de ACU</h2>
+    <form id="recoleccionForm">
+      <input type="text" name="razon_social" placeholder="Nombre o razón social" required>
+      <input type="text" name="direccion" placeholder="Dirección del establecimiento" required>
+      <input type="text" name="ciudad" placeholder="Ciudad" required>
+      <select name="tipo_cliente" required>
+        <option value="">Tipo de cliente</option>
+        <option>Nuevo</option>
+        <option>Antiguo</option>
+      </select>
+      <input type="text" name="nombre" placeholder="Nombres y apellidos" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <textarea name="observaciones" placeholder="Observaciones"></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <p class="form-note">Una vez recibamos este formulario nos pondremos en contacto contigo para asignarte una fecha de recolección.</p>
+    <div id="formResponse"></div>
+  </section>
+
+  <!-- Impacto ambiental -->
+  <section class="impacto">
+    <h2>El impacto del mal manejo del ACU</h2>
+    <p>Un solo litro de ACU puede contaminar hasta 40.000 litros de agua.</p>
+    <p>Recicla el aceite de manera adecuada. Programa tu recolección con GrasasBio.</p>
+  </section>
+
+  <!-- Logos Section -->
+  <section class="logos">
+    <h2>Nuestros Aliados</h2>
+    <div class="logos-grid">
+      <img src="LOGO SDA.png" alt="SDA">
+      <img src="LOGO DAGMA.jpg" alt="DAGMA">
+      <img src="logo_corpoamazonia.jpg" alt="Corpoamazonia">
+      <img src="logo-corpo-2018.png" alt="CAR">
+      <img src="CorantioquiaSoloJPG-300x231.jpg" alt="Corantioquia">
+      <img src="Corpomojana-Eslogan-Web.png" alt="Corpomojana">
+      <img src="CAM.png" alt="CAM">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GrasasBio S.A.S. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/573052665845" class="whatsapp-float" target="_blank">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
